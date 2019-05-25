@@ -21,7 +21,7 @@ public class DiscountServiceImpl implements IDiscountService {
 		else if (bill.getCustomerInfo().getStatus().equals(CustomerInfo.Status.SILVER_CUSTOMER))
 			discountPercentage =  (5d / 100);
 		else
-			discountPercentage = 1d;
+			discountPercentage = 0d;
 
 		bill.getProductList().stream().forEach(p -> {
 			if (!p.getType().equals(ProductInfo.Type.GROCERY))
